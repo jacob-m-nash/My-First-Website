@@ -1,9 +1,28 @@
 <!DOCTYPE html>
 <html>
         <head>
-        	<style>h1{text-align:center; font-family:"Comic Sans MS", "Comic Sans", cursive; font-size:400%} </style>
+                <style> h1{text-align:center; font-family:"Comic Sans MS", "Comic Sans", cursive; font-size:400%}
+                        p{text-align:center; font-family:"Comic Sans MS", "Conic Sans", cursive;}
+                        .center{text-align: center}
+                </style>
         </head>
         <body>
-        	<h1>Yes!</h1>
-        </body>
+
+                <h1>Yes!</h1>
+                <p>Haven't recived marks?</p>
+                <p>Use the random number generator below to predict your grade</p>
+                <div class="center">
+                 <input type="Button" value = "Generate" onclick="Random();"/>
+                </div>
+                <p id="res"><p>
+
+<script type="text/javascript">
+function Random() {
+var mark = "Your mark is: "
+var rnd = Math.floor(Math.random() * 100).toString();
+var strRes =  mark.concat(rnd);
+document.getElementById("res").innerHTML = strRes;
+}
+</script>
+</body>
 </html>
